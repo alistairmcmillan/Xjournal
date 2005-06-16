@@ -7,6 +7,7 @@
 //
 
 #import "LJEntryExtensions.h"
+#import <OmniFoundation/OmniFoundation.h>
 #import "XJPreferences.h"
 #import "XJAccountManager.h"
 
@@ -26,7 +27,6 @@
 #define kItemIDKey @"ItemID"
 #define kPosterUsernameKey @"PosterUsername"
 #define kANumKey @"aNum"
-#define kAccountUsernameKey @"AccountUsername"
 
 #define kCurrentFileFormatVersion 1
 #define kCurrentFileFormatVersionKey @"EntryFileVersion"
@@ -43,28 +43,21 @@
 
 
     // Encode subject
-    [dictionary setObject: [self subject] ? [self subject] : @""
-				   forKey: kSubjectKey];
+    [dictionary setObject: [self subject] forKey: kSubjectKey defaultObject: @""];
 
     // Encode Content
-    [dictionary setObject: [self content] ? [self content] : @""
-				   forKey: kContentKey];
+    [dictionary setObject: [self content] forKey: kContentKey defaultObject: @""];
 
     //if([self optionBackdated])
     [dictionary setObject: [self date] forKey: kDateKey];
 
-	// Encode account name
-	[dictionary setObject: [[self account] username] forKey: kAccountUsernameKey];
-	
-    // Encode journal name	
-    [dictionary setObject: [[self journal] name] forKey: kJournalNameKey];
+    // Encode journal name
+    [dictionary setObject: [[self journal] name] forKey: kJournalNameKey defaultObject: [[[[XJAccountManager defaultManager] loggedInAccount] defaultJournal] name]];
 
     // Encode security mode
     if([self securityMode] != LJPublicSecurityMode) {
-        [dictionary setObject: [NSNumber numberWithInt: [self securityMode]]
-					   forKey: kSecurityModeKey];
-        [dictionary setObject: [NSNumber numberWithInt: [self groupsAllowedAccessMask]]
-					   forKey: kGroupAllowedMaskKey];
+        [dictionary setIntValue: [self securityMode] forKey: kSecurityModeKey defaultValue: LJPublicSecurityMode];
+        [dictionary setIntValue: [self groupsAllowedAccessMask] forKey: kGroupAllowedMaskKey];
     }
 
 
@@ -74,19 +67,18 @@
         [dictionary setObject: _customInfo forKey: @"info"];
 
     // Encode poster user name
-    [dictionary setObject: _posterUsername ? _posterUsername : @""
-				   forKey: kPosterUsernameKey];
+    [dictionary setObject: _posterUsername forKey: kPosterUsernameKey defaultObject: @""];
 
     // Encode item ID
-    [dictionary setObject: [NSNumber numberWithInt: _itemID]
-				   forKey: kItemIDKey];
-    [dictionary setObject: [NSNumber numberWithInt: _aNum]
-				   forKey: kANumKey];
+    [dictionary setIntValue: _itemID forKey: kItemIDKey];
+    [dictionary setIntValue: _aNum forKey: kANumKey];
     
-    
+    // Tags
+	if([self tags])
+		[dictionary setObject: [self tags] forKey: @"Tags"];
+	
     // Set the current version of the file
-    [dictionary setObject: [NSNumber numberWithInt: kCurrentFileFormatVersion]
-				   forKey: kCurrentFileFormatVersionKey];
+    [dictionary setIntValue: kCurrentFileFormatVersion forKey: kCurrentFileFormatVersionKey];
 
     return dictionary;
 }
@@ -99,34 +91,34 @@
 
 - (void)configureFromPropertyListRepresentation:(id)dict
 {
-    [self setSubject: [dict objectForKey: kSubjectKey]];
-    [self setContent: [dict objectForKey: kContentKey]];
+    [self setSubject: [dict objectForKey: kSubjectKey defaultObject: @""]];
+    [self setContent: [dict objectForKey: kContentKey defaultObject: @""]];
 
     _properties = [[self makeMutableDictionary: [dict objectForKey: @"props"]] retain];
-    _customInfo = [[dict objectForKey: @"info"] retain];
+    _customInfo = [[dict objectForKey: @"info" defaultObject: nil] retain];
     
     //if([self optionBackdated])
     [self setDate: [dict objectForKey: kDateKey]];
 
-	LJAccount *acct = [[XJAccountManager defaultManager] accountWithUsername: [dict objectForKey: kAccountUsernameKey]]; 
-	[self setAccount: acct];
-	
-    LJJournal *journal = [acct journalNamed: [dict objectForKey: kJournalNameKey]];
+    LJJournal *journal = [[[XJAccountManager defaultManager] loggedInAccount] journalNamed: [dict objectForKey: kJournalNameKey]];
     if(journal)
         [self setJournal: journal];
     else
-        [self setJournal: [[[XJAccountManager defaultManager] defaultAccount] defaultJournal]];
+        [self setJournal: [[[XJAccountManager defaultManager] loggedInAccount] defaultJournal]];
 
-    [self setSecurityMode: [[dict objectForKey: kSecurityModeKey] intValue]];
+    [self setSecurityMode: [dict intForKey: kSecurityModeKey defaultValue: LJPublicSecurityMode]];
     if([self securityMode] != LJPublicSecurityMode)
-        [self setGroupsAllowedAccessMask: [[dict objectForKey: kGroupAllowedMaskKey] intValue]];
+        [self setGroupsAllowedAccessMask: [dict intForKey: kGroupAllowedMaskKey]];
 
     // Decode poster user name
     _posterUsername = [[dict objectForKey: kPosterUsernameKey] retain];
 
     // Encode item ID
-    _itemID = [[dict objectForKey: kItemIDKey] intValue];
-    _aNum = [[dict objectForKey: kANumKey] intValue];
+    _itemID = [dict intForKey: kItemIDKey];
+    _aNum = [dict intForKey: kANumKey];
+	
+	// Tags
+	[self setTags: [dict objectForKey: @"Tags"]];
 }
 
 - (NSString *)metadataHTML
