@@ -1,0 +1,35 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {setFontUsingFontPanel = id; }; 
+            CLASS = OAFontView; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {delegate = id; }; 
+            SUPERCLASS = NSView; 
+        }, 
+        {
+            ACTIONS = {
+                changeFont = id; 
+                changeTextFont = id; 
+                checkNow = id; 
+                openAccountWindow = id; 
+                setSelectedFriendsSound = id; 
+            }; 
+            CLASS = XJPreferencesController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                accountsView = NSView; 
+                checkFriendsGroupTable = NSTableView; 
+                friendsView = NSView; 
+                historyView = NSView; 
+                musicView = NSView; 
+                softwareUpdateView = NSView; 
+                soundSelection = NSPopUpButton; 
+                weblogsView = NSView; 
+            }; 
+            SUPERCLASS = NSWindowController; 
+        }
+    ); 
+    IBVersion = 1; 
+}
