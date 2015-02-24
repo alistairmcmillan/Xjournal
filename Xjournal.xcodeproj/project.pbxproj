@@ -23,8 +23,6 @@
 
 /* Begin PBXBuildFile section */
 		1B0DEBEA053AF10C00A310CF /* make_event_ical.txt in Resources */ = {isa = PBXBuildFile; fileRef = 1B0DEBE9053AF10C00A310CF /* make_event_ical.txt */; };
-		1B1E170804E4465300894181 /* Xjournal Help in Resources */ = {isa = PBXBuildFile; fileRef = 1B1E16DF04E4465300894181 /* Xjournal Help */; };
-		1B49FD0C04F4300400F9843B /* HTMLPreview.nib in Resources */ = {isa = PBXBuildFile; fileRef = 1B49FD0A04F4300400F9843B /* HTMLPreview.nib */; };
 		1B4DEF5205072AAA00090913 /* LJKit-URLLaunching.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B4DEF5005072AAA00090913 /* LJKit-URLLaunching.h */; };
 		1B4DEF5305072AAA00090913 /* LJKit-URLLaunching.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B4DEF5105072AAA00090913 /* LJKit-URLLaunching.m */; };
 		1B76D69404CDD901008E50A3 /* AddressBookDropView.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B76D69204CDD901008E50A3 /* AddressBookDropView.h */; };
@@ -192,14 +190,12 @@
 		5F142E42091E95660002ADAE /* Add.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 5F142E3B091E95660002ADAE /* Add.tiff */; };
 		5F142E43091E95660002ADAE /* Remove_Pressed.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 5F142E3D091E95660002ADAE /* Remove_Pressed.tiff */; };
 		5F142E44091E95660002ADAE /* Remove.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 5F142E3F091E95660002ADAE /* Remove.tiff */; };
-		5F142E57091E9BE20002ADAE /* GlossaryWindow.nib in Resources */ = {isa = PBXBuildFile; fileRef = 5F142E55091E9BE20002ADAE /* GlossaryWindow.nib */; };
 		5F5468650928059200ABCAC9 /* XJApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F5B05260924D90A005BB86B /* XJApplication.m */; };
 		5F5468660928059300ABCAC9 /* XJApplication.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F5B05250924D90A005BB86B /* XJApplication.h */; };
 		5F5468C2092809EF00ABCAC9 /* XJSyndicationData.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F5468C0092809EF00ABCAC9 /* XJSyndicationData.h */; };
 		5F5468C3092809EF00ABCAC9 /* XJSyndicationData.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F5468C1092809EF00ABCAC9 /* XJSyndicationData.m */; };
 		5F54693E09280BAF00ABCAC9 /* PostToWeblog.tif in Resources */ = {isa = PBXBuildFile; fileRef = 5F54693D09280BAF00ABCAC9 /* PostToWeblog.tif */; };
 		5F562CBA06B99296004629AE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5F562CB806B99296004629AE /* Localizable.strings */; };
-		5F5B05680924DD45005BB86B /* Preferences.nib in Resources */ = {isa = PBXBuildFile; fileRef = 5F5B05660924DD45005BB86B /* Preferences.nib */; };
 		5F5B06D80924FBFA005BB86B /* XJPreferencesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F5B05880924E5A0005BB86B /* XJPreferencesController.m */; };
 		5F5B06D90924FBFC005BB86B /* XJPreferencesController.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F5B05870924E5A0005BB86B /* XJPreferencesController.h */; };
 		5F5B083F09252596005BB86B /* ApplicationDefaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5F5B083E09252596005BB86B /* ApplicationDefaults.plist */; };
@@ -231,6 +227,7 @@
 		F3A392300F7FFF6C0079760A /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3A3922F0F7FFF6C0079760A /* Sparkle.framework */; };
 		F3A392700F8001F40079760A /* Sparkle.framework in Copy Framework Files */ = {isa = PBXBuildFile; fileRef = F3A3922F0F7FFF6C0079760A /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		F3A3927D0F80228E0079760A /* dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = F3A3927C0F80228E0079760A /* dsa_pub.pem */; };
+		F3ACB2D01A9D222300D6AA64 /* Xjournal Help in Resources */ = {isa = PBXBuildFile; fileRef = 1B1E16DF04E4465300894181 /* Xjournal Help */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXBuildRule section */
@@ -1183,8 +1180,7 @@
 				1BBFE83204C4978B002D9439 /* HistoryDownload.icns in Resources */,
 				1B870E0B04C7EAA200C54147 /* ChangeNotes.rtf in Resources */,
 				1B870E0D04C7EABE00C54147 /* ReadMe.rtf in Resources */,
-				1B1E170804E4465300894181 /* Xjournal Help in Resources */,
-				1B49FD0C04F4300400F9843B /* HTMLPreview.nib in Resources */,
+				F3ACB2D01A9D222300D6AA64 /* Xjournal Help in Resources */,
 				1B0DEBEA053AF10C00A310CF /* make_event_ical.txt in Resources */,
 				1B967FC5058779680035F70C /* itunes.png in Resources */,
 				5F071A0605DB8A34003058D3 /* GenPreferences.tiff in Resources */,
@@ -1195,8 +1191,6 @@
 				5F142E42091E95660002ADAE /* Add.tiff in Resources */,
 				5F142E43091E95660002ADAE /* Remove_Pressed.tiff in Resources */,
 				5F142E44091E95660002ADAE /* Remove.tiff in Resources */,
-				5F142E57091E9BE20002ADAE /* GlossaryWindow.nib in Resources */,
-				5F5B05680924DD45005BB86B /* Preferences.nib in Resources */,
 				5F54693E09280BAF00ABCAC9 /* PostToWeblog.tif in Resources */,
 				585E030C0A1A2F7E001E92ED /* CFPSL_1_0.rtf in Resources */,
 				F30490720F222DE4008A1888 /* popupbutton.tiff in Resources */,
