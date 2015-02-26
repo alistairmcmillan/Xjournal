@@ -15,7 +15,7 @@
 @implementation XJGlossaryWindowController
 - (id)init
 {
-	self == [super initWithWindowNibName: @"GlossaryWindow"];
+	self = [super initWithWindowNibName: @"GlossaryWindow"];
     if(self) {
 		if(![self fileExists: kGlossaryFilePath])
 			[self writeExampleGlossaryFile];

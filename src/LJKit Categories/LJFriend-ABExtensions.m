@@ -206,13 +206,13 @@
     
     [headerText appendString:[NSString stringWithFormat:@"set eventTitle to \"%@\"\r", eventTitle]];
      
-    [headerText appendString:[NSString stringWithFormat:@"set eventDay to %d\r", [birthday dayOfMonth]]];
+    [headerText appendString:[NSString stringWithFormat:@"set eventDay to %ld\r", (long)[birthday dayOfMonth]]];
     [headerText appendString:[NSString stringWithFormat:@"set eventMonth to %@\r", [birthday descriptionWithCalendarFormat:@"%B"]]];
-    [headerText appendString:[NSString stringWithFormat:@"set eventMonthNum to %d\r", [birthday monthOfYear]]];
+    [headerText appendString:[NSString stringWithFormat:@"set eventMonthNum to %ld\r", (long)[birthday monthOfYear]]];
     
     // We now create birthdays starting in the current year, to avoid lots of events in the past.
     // If you prefer the old behaviour, change "[NSCalendarDate calendarDate]" to "birthday" in the next line.
-    [headerText appendString:[NSString stringWithFormat:@"set eventYear to %d\r", [[NSCalendarDate calendarDate] yearOfCommonEra]]];
+    [headerText appendString:[NSString stringWithFormat:@"set eventYear to %ld\r", (long)[[NSCalendarDate calendarDate] yearOfCommonEra]]];
     
     [headerText appendString:scriptBody];
     
