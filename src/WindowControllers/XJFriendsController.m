@@ -95,7 +95,7 @@ enum {
 
     [[self window] setTitle: [NSString stringWithFormat: @"%@ - %@", NSLocalizedString(@"Friends", @""), [[self account] username]]];
     
-    [groupTable selectRow: 0 byExtendingSelection: NO];
+    [groupTable selectRowIndexes:[NSIndexSet indexSetWithIndex:0] byExtendingSelection: NO];
     [self updateFriendTableCache];
 
     [self sortFriendTableCacheOnColumn: sortedColumn direction: sortDirection];
@@ -139,7 +139,7 @@ enum {
     // Sort it
     sortedColumn = [friendsTable tableColumnWithIdentifier: @"username"];
     sortDirection = XJColumnSortedAscending;
-    [groupTable selectRow: 0 byExtendingSelection: NO];
+    [groupTable selectRowIndexes:[NSIndexSet indexSetWithIndex:0] byExtendingSelection: NO];
     [self sortFriendTableCacheOnColumn: sortedColumn direction: sortDirection];
 
     // Reload
@@ -221,7 +221,7 @@ enum {
     if(!grp) return;
     
     [[self account] removeGroup: grp];
-    [groupTable selectRow: 0 byExtendingSelection: NO];
+    [groupTable selectRowIndexes:[NSIndexSet indexSetWithIndex:0] byExtendingSelection: NO];
     
     [[self window] setDocumentEdited: YES];
     [self refreshWindow: nil];
@@ -563,10 +563,11 @@ enum {
 
 - (NSArray *)selectedFriendArray {
 	NSMutableArray *friends = [[NSMutableArray array] retain];
-	NSEnumerator *rowEnum = [friendsTable selectedRowEnumerator];
-	int i;
-	while(i = [[rowEnum nextObject] intValue]) {
+    NSIndexSet *rowNumbers = [friendsTable selectedRowIndexes];
+	NSUInteger i = [rowNumbers firstIndex];
+	while(i != NSNotFound) {
 		[friends addObject: [friendTableCache objectAtIndex:i]];
+        i = [rowNumbers indexGreaterThanIndex:i];
 	}
 	return [friends autorelease];
 }
@@ -587,7 +588,7 @@ enum {
         if([groupTable selectedRow] == 0)
             sortInfo = [sortSettings objectForKey: @"kAllFriendsXjournalItem"];
         else if([groupTable selectedRow] == -1) {
-            [friendsTable selectRow: -1 byExtendingSelection: NO];
+            [friendsTable selectRowIndexes:[NSIndexSet indexSetWithIndex:-1] byExtendingSelection: NO];
             [friendsTable reloadData];
             return;
         }
@@ -629,7 +630,7 @@ enum {
             sortDirection = XJColumnSortedAscending;
         } 
 
-        [friendsTable selectRow: -1 byExtendingSelection: NO];
+        [friendsTable selectRowIndexes:[NSIndexSet indexSetWithIndex:-1] byExtendingSelection: NO];
         [friendsTable reloadData];
     }
     else {
@@ -1095,7 +1096,7 @@ enum {
 
     if(selectedFriendBeforeSort) {
         int theIndex = [friendTableCache indexOfObject: selectedFriendBeforeSort];
-        [friendsTable selectRow: theIndex byExtendingSelection: NO];
+        [friendsTable selectRowIndexes:[NSIndexSet indexSetWithIndex: theIndex ] byExtendingSelection: NO];
         [friendsTable scrollRowToVisible: theIndex];
     }
 }

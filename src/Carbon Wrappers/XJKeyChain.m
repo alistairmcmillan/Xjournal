@@ -34,11 +34,11 @@ static XJKeyChain* defaultKeyChain = nil;
     if (!password || [password length] == 0) {
         [self removeGenericPasswordForService:service account:account];
     } else {
-        strcpy(p,[password cString]);
+        strcpy(p,[password UTF8String]);
     
         if (itemref = [self _genericPasswordReferenceForService:service account:account])
         KCDeleteItem(itemref);
-        ret = kcaddgenericpassword([service cString], [account cString], [password cStringLength], 
+        ret = kcaddgenericpassword([service UTF8String], [account UTF8String], [password lengthOfBytesUsingEncoding:NSUTF8StringEncoding],
         p, NULL);
         free(p); 
     }
@@ -56,10 +56,10 @@ static XJKeyChain* defaultKeyChain = nil;
         return @"";
     }
     
-    ret = kcfindgenericpassword([service cString], [account cString], maxPasswordLength-1, p, &length, nil);
+    ret = kcfindgenericpassword([service UTF8String], [account UTF8String], maxPasswordLength-1, p, &length, nil);
 
     if (!ret)
-        string = [NSString stringWithCString:(const char*)p length:length];
+        string = [NSString stringWithCString:(const char*)p encoding:NSUTF8StringEncoding];
     free(p); 
     return string;
 }
@@ -91,7 +91,7 @@ static XJKeyChain* defaultKeyChain = nil;
 - (KCItemRef)_genericPasswordReferenceForService:(NSString *)service account:(NSString*)account
 {
     KCItemRef itemref = nil;
-    kcfindgenericpassword([service cString],[account cString],nil,nil,nil,&itemref);
+    kcfindgenericpassword([service UTF8String],[account UTF8String],nil,nil,nil,&itemref);
     return itemref;
 }
 

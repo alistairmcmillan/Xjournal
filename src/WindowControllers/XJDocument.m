@@ -898,14 +898,14 @@ NSString *TXJshowMoodField     = @"ShowMoodField";
 
 - (void)postEntryAndDiscardLocalCopy:(id)sender
 {
-	if([self fileName] != nil && [self isDocumentEdited]) {  // Was opened from file and is dirty
+	if([self fileURL] != nil && [self isDocumentEdited]) {  // Was opened from file and is dirty
 		int unsavedOption = [[[[NSUserDefaultsController sharedUserDefaultsController] values] valueForKey: @"XJUnsavedOption"] intValue];
 
 		if(unsavedOption != 2) { // 2 == don't save
 			BOOL shouldSave = YES;
 			
 			if(unsavedOption == 0) { // ask
-				NSString *file = [[self fileName] lastPathComponent];
+				NSString *file = [[self fileURL] lastPathComponent];
 				NSString *msg = [NSString stringWithFormat: @"Do you want to save the changes you made in the document \"%@\"?", file];
 
 				int result = NSRunInformationalAlertPanel(msg,

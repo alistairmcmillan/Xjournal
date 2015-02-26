@@ -122,7 +122,7 @@
     assert(sizeof(SCNetworkConnectionFlags) == sizeof(int));
 
     result = false;
-    if ( SCNetworkCheckReachabilityByName([host cString], &flags) ) {
+    if ( SCNetworkCheckReachabilityByName([host UTF8String], &flags) ) {
         result =    !(flags & kSCNetworkFlagsConnectionRequired)
         &&  (flags & kSCNetworkFlagsReachable);
     }

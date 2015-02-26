@@ -89,7 +89,7 @@
     if([sender tag] == 0) {
         if([questionTable numberOfSelectedRows] == 1) {
             [thePoll moveQuestionAtIndex: [questionTable selectedRow] toIndex: [questionTable selectedRow] - 1];
-            [questionTable selectRow: [questionTable selectedRow] - 1 byExtendingSelection: NO];
+            [questionTable selectRowIndexes:[NSIndexSet indexSetWithIndex: [questionTable selectedRow] - 1 ] byExtendingSelection: NO];
         }
         [questionTable reloadData];
     }
@@ -97,7 +97,7 @@
     if([sender tag] == 1) { // answer table
         if([multipleAnswerTable numberOfSelectedRows] == 1) {
             [(LJPollMultipleOptionQuestion *)currentlyEditedQuestion moveAnswerAtIndex: [multipleAnswerTable selectedRow] toIndex: [multipleAnswerTable selectedRow]-1];
-            [multipleAnswerTable selectRow: [multipleAnswerTable selectedRow] - 1 byExtendingSelection: NO];
+            [multipleAnswerTable selectRowIndexes:[NSIndexSet indexSetWithIndex: [multipleAnswerTable selectedRow] - 1 ]  byExtendingSelection: NO];
             [multipleAnswerTable reloadData];
         }
     }
@@ -111,7 +111,7 @@
     if([sender tag] == 0) {
         if([questionTable numberOfSelectedRows] == 1) {
             [thePoll moveQuestionAtIndex: [questionTable selectedRow] toIndex: [questionTable selectedRow] + 1];
-            [questionTable selectRow: [questionTable selectedRow] + 1 byExtendingSelection: NO];
+            [questionTable selectRowIndexes:[NSIndexSet indexSetWithIndex: [questionTable selectedRow] + 1 ] byExtendingSelection: NO];
         }
         [questionTable reloadData];
     }
@@ -119,7 +119,7 @@
      if([sender tag] == 1) {
         if([multipleAnswerTable numberOfSelectedRows] == 1) {
             [(LJPollMultipleOptionQuestion *)currentlyEditedQuestion moveAnswerAtIndex: [multipleAnswerTable selectedRow] toIndex: [multipleAnswerTable selectedRow] + 1];
-            [multipleAnswerTable selectRow: [multipleAnswerTable selectedRow] + 1 byExtendingSelection: NO];
+            [multipleAnswerTable selectRowIndexes:[NSIndexSet indexSetWithIndex: [multipleAnswerTable selectedRow] + 1 ] byExtendingSelection: NO];
         }
         [multipleAnswerTable reloadData];
     }
@@ -132,7 +132,7 @@
     [multipleSheet endEditingFor: nil];
     [(LJPollMultipleOptionQuestion *)currentlyEditedQuestion addAnswer: @"answer"];
     [multipleAnswerTable reloadData];
-    [multipleAnswerTable selectRow: [multipleAnswerTable numberOfRows]-1 byExtendingSelection: NO];
+    [multipleAnswerTable selectRowIndexes:[NSIndexSet indexSetWithIndex: [multipleAnswerTable numberOfRows] - 1 ] byExtendingSelection: NO];
     [multipleAnswerTable editColumn: 0
                                 row: [multipleAnswerTable numberOfRows]-1
                           withEvent: nil
@@ -222,11 +222,12 @@
 {
 	[[self window] endEditingFor: nil];
 	
-    NSEnumerator *selectedRows = [multipleAnswerTable selectedRowEnumerator];
-    NSNumber *rowNumber;
+    NSIndexSet *selectedRows = [multipleAnswerTable selectedRowIndexes];
+    NSUInteger rowNumber = [selectedRows firstIndex];
 
-    while(rowNumber = [selectedRows nextObject]) {
-        [(LJPollMultipleOptionQuestion *)currentlyEditedQuestion deleteAnswerAtIndex: [rowNumber intValue]];
+    while(rowNumber != NSNotFound) {
+        [(LJPollMultipleOptionQuestion *)currentlyEditedQuestion deleteAnswerAtIndex: rowNumber];
+        rowNumber = [selectedRows indexGreaterThanIndex:rowNumber];
     }
 
     [multipleAnswerTable reloadData];
@@ -235,11 +236,12 @@
 
 - (IBAction)deleteSelectedQuestion:(id)sender
 {
-    NSEnumerator *selectedRows = [questionTable selectedRowEnumerator];
-    NSNumber *rowNumber;
+    NSIndexSet *selectedIndexes = [questionTable selectedRowIndexes];
+    NSUInteger rowNumber = [selectedIndexes firstIndex];
 
-    while(rowNumber = [selectedRows nextObject]) {
-        [thePoll deleteQuestionAtIndex: [rowNumber intValue]];
+    while(rowNumber != NSNotFound) {
+        [thePoll deleteQuestionAtIndex: rowNumber];
+        rowNumber = [selectedIndexes indexGreaterThanIndex:rowNumber];
     }
 
     [questionTable reloadData];
