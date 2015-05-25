@@ -91,7 +91,7 @@
 
 - (void)configureWithContentsOfFile: (NSString *)file
 {
-    NSMutableDictionary *dict = [NSDictionary dictionaryWithContentsOfFile: file];
+    NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithContentsOfFile: file];
     [self configureFromPropertyListRepresentation: dict];
 }
 
