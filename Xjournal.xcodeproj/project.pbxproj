@@ -492,7 +492,7 @@
 		5F5468C0092809EF00ABCAC9 /* XJSyndicationData.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = XJSyndicationData.h; sourceTree = "<group>"; };
 		5F5468C1092809EF00ABCAC9 /* XJSyndicationData.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = XJSyndicationData.m; sourceTree = "<group>"; };
 		5F54693D09280BAF00ABCAC9 /* PostToWeblog.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = PostToWeblog.tif; path = src/Art/PostToWeblog.tif; sourceTree = "<group>"; };
-		5F562CB906B99296004629AE /* English */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.strings; name = English; path = src/English.lproj/Localizable.strings; sourceTree = "<group>"; };
+		5F562CB906B99296004629AE /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = src/English.lproj/Localizable.strings; sourceTree = "<group>"; };
 		5F5B05250924D90A005BB86B /* XJApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XJApplication.h; sourceTree = "<group>"; };
 		5F5B05260924D90A005BB86B /* XJApplication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XJApplication.m; sourceTree = "<group>"; };
 		5F5B05670924DD45005BB86B /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = src/English.lproj/Preferences.nib; sourceTree = "<group>"; };
