@@ -42,7 +42,7 @@ extern NSString *TXJshowMoodField;
 
 @class XJMusic;
 
-@interface XJDocument : NSDocument
+@interface XJDocument : NSDocument <NSToolbarDelegate>
 {
     // ----------------------------------------------------------------------------------------
     // Window outlets

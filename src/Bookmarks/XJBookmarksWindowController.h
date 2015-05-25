@@ -17,7 +17,7 @@
 #define kBookmarkExpandAllItemIdentifier @"BookmarkExpandAllItemIdentifier"
 #define kBookmarkCollapseAllItemIdentifier @"BookmarkCollapseAllItemIdentifier"
 
-@interface XJBookmarksWindowController : NSWindowController {
+@interface XJBookmarksWindowController : NSWindowController <NSToolbarDelegate> {
     IBOutlet NSOutlineView* outline;
     NSMutableDictionary *toolbarItemCache;
     XJSafariBookmarkParser *parser;

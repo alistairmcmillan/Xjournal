@@ -12,7 +12,7 @@
 
 #import <WebKit/WebKit.h>
 
-@interface XJHistoryWindowController : NSWindowController {
+@interface XJHistoryWindowController : NSWindowController <NSToolbarDelegate> {
     // The NSBrowser for dates
     IBOutlet NSBrowser *browser;
 
