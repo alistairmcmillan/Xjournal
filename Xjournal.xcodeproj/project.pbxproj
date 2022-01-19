@@ -180,6 +180,7 @@
 		1BF27EF204B02A9400121863 /* stop.0.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 1BF27EE704B02A9400121863 /* stop.0.tiff */; };
 		1BF27EF304B02A9400121863 /* stop.1.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 1BF27EE804B02A9400121863 /* stop.1.tiff */; };
 		1BF27EF404B02A9400121863 /* stop.2.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 1BF27EE904B02A9400121863 /* stop.2.tiff */; };
+		459D47112797918E00B8E859 /* Xjournal Help in Resources */ = {isa = PBXBuildFile; fileRef = 1B1E16E004E4465300894181 /* Xjournal Help */; };
 		585E030C0A1A2F7E001E92ED /* CFPSL_1_0.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 585E030B0A1A2F7E001E92ED /* CFPSL_1_0.rtf */; };
 		5F044AD809224A4F003D6D2A /* XJMarkupRemovalVT.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F044AD609224A4F003D6D2A /* XJMarkupRemovalVT.h */; };
 		5F044AD909224A50003D6D2A /* XJMarkupRemovalVT.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F044AD709224A4F003D6D2A /* XJMarkupRemovalVT.m */; };
@@ -230,7 +231,6 @@
 		F3A392300F7FFF6C0079760A /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3A3922F0F7FFF6C0079760A /* Sparkle.framework */; };
 		F3A392700F8001F40079760A /* Sparkle.framework in Copy Framework Files */ = {isa = PBXBuildFile; fileRef = F3A3922F0F7FFF6C0079760A /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		F3A3927D0F80228E0079760A /* dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = F3A3927C0F80228E0079760A /* dsa_pub.pem */; };
-		F3ACB2D01A9D222300D6AA64 /* Xjournal Help in Resources */ = {isa = PBXBuildFile; fileRef = 1B1E16DF04E4465300894181 /* Xjournal Help */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXBuildRule section */
@@ -238,6 +238,8 @@
 			isa = PBXBuildRule;
 			compilerSpec = com.apple.compilers.gcc;
 			fileType = sourcecode.c;
+			inputFiles = (
+			);
 			isEditable = 1;
 			outputFiles = (
 			);
@@ -246,6 +248,8 @@
 			isa = PBXBuildRule;
 			compilerSpec = com.apple.compilers.gcc;
 			fileType = sourcecode.asm;
+			inputFiles = (
+			);
 			isEditable = 1;
 			outputFiles = (
 			);
@@ -254,6 +258,8 @@
 			isa = PBXBuildRule;
 			compilerSpec = com.apple.compilers.gcc;
 			fileType = sourcecode.c;
+			inputFiles = (
+			);
 			isEditable = 1;
 			outputFiles = (
 			);
@@ -308,10 +314,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		089C1660FE840EACC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = src/English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1B0DEBE9053AF10C00A310CF /* make_event_ical.txt */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text; name = make_event_ical.txt; path = src/make_event_ical.txt; sourceTree = "<group>"; };
-		1B1E16E004E4465300894181 /* English.lproj */ = {isa = PBXFileReference; lastKnownFileType = folder; name = English.lproj; path = src/English.lproj; sourceTree = "<group>"; };
-		1B49FD0B04F4300400F9843B /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = HTMLPreview.nib; sourceTree = "<group>"; };
+		1B1E16E004E4465300894181 /* Xjournal Help */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "Xjournal Help"; path = src/English.lproj; sourceTree = "<group>"; };
 		1B4DEF5005072AAA00090913 /* LJKit-URLLaunching.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LJKit-URLLaunching.h"; sourceTree = "<group>"; };
 		1B4DEF5105072AAA00090913 /* LJKit-URLLaunching.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "LJKit-URLLaunching.m"; sourceTree = "<group>"; };
 		1B76D69204CDD901008E50A3 /* AddressBookDropView.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = AddressBookDropView.h; path = src/Classes/AddressBookDropView.h; sourceTree = SOURCE_ROOT; };
@@ -389,18 +393,6 @@
 		1BBD89A004B0189F003882CD /* XJHistoryWindowController.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = XJHistoryWindowController.m; sourceTree = "<group>"; };
 		1BBD89A304B0189F003882CD /* XJPollEditorController.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = XJPollEditorController.h; sourceTree = "<group>"; };
 		1BBD89A404B0189F003882CD /* XJPollEditorController.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = XJPollEditorController.m; sourceTree = "<group>"; };
-		1BBD8A0804B018FF003882CD /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = NewFriendsWindow.nib; sourceTree = "<group>"; };
-		1BBD8A0A04B018FF003882CD /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = PollEditor.nib; sourceTree = "<group>"; };
-		1BBD8A0E04B018FF003882CD /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = UserSheet.nib; sourceTree = "<group>"; };
-		1BBD8A1404B018FF003882CD /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = XJDocument.nib; sourceTree = "<group>"; };
-		1BBD8A2904B01916003882CD /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = AccountEditWindow.nib; sourceTree = "<group>"; };
-		1BBD8A2B04B01916003882CD /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = BirthdaysWindow.nib; sourceTree = "<group>"; };
-		1BBD8A2D04B01916003882CD /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = Bookmarks.nib; sourceTree = "<group>"; };
-		1BBD8A2F04B01916003882CD /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = CommunitySheet.nib; sourceTree = "<group>"; };
-		1BBD8A3104B01916003882CD /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = CutSheet.nib; sourceTree = "<group>"; };
-		1BBD8A3504B01916003882CD /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = HistoryWindow.nib; sourceTree = "<group>"; };
-		1BBD8A3704B01916003882CD /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = HREFSheet.nib; sourceTree = "<group>"; };
-		1BBD8A3904B01916003882CD /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = IMGSheet.nib; sourceTree = "<group>"; };
 		1BBD8BDE04B01A6B003882CD /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = /System/Library/Frameworks/AddressBook.framework; sourceTree = "<absolute>"; };
 		1BBD8BF304B01A77003882CD /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
 		1BBD8C8C04B01A85003882CD /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = /System/Library/Frameworks/SystemConfiguration.framework; sourceTree = "<absolute>"; };
@@ -472,11 +464,32 @@
 		1BF27EE804B02A9400121863 /* stop.1.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = stop.1.tiff; path = src/Art/SearchField/stop.1.tiff; sourceTree = SOURCE_ROOT; };
 		1BF27EE904B02A9400121863 /* stop.2.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = stop.2.tiff; path = src/Art/SearchField/stop.2.tiff; sourceTree = SOURCE_ROOT; };
 		2A37F4B0FDCFA73011CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = main.m; path = src/main.m; sourceTree = "<group>"; };
-		2A37F4B7FDCFA73011CA2CEA /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = MainMenu.nib; sourceTree = "<group>"; };
-		2A37F4BAFDCFA73011CA2CEA /* Credits.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = Credits.rtf; path = src/English.lproj/Credits.rtf; sourceTree = "<group>"; };
 		2A37F4C4FDCFA73011CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		2A37F4C5FDCFA73011CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		32DBCF750370BD2300C91783 /* Xjournal_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Xjournal_Prefix.pch; path = src/Xjournal_Prefix.pch; sourceTree = "<group>"; };
+		459D4713279791C800B8E859 /* en */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = en; path = src/en.lproj/Add.tiff; sourceTree = "<group>"; };
+		459D4714279791C800B8E859 /* en */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = en; path = src/en.lproj/Add_Pressed.tiff; sourceTree = "<group>"; };
+		459D4715279791C800B8E859 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = src/en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		459D4716279791C800B8E859 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = src/en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		459D4717279791C800B8E859 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = src/en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		459D4718279791C800B8E859 /* en */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = en; path = src/en.lproj/Remove.tiff; sourceTree = "<group>"; };
+		459D4719279791C800B8E859 /* en */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = en; path = src/en.lproj/Remove_Pressed.tiff; sourceTree = "<group>"; };
+		459D472A279791D300B8E859 /* Base */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Base; path = src/Base.lproj/GlossaryWindow.nib; sourceTree = "<group>"; };
+		459D472B279791D300B8E859 /* Base */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Base; path = ../Base.lproj/AccountEditWindow.nib; sourceTree = "<group>"; };
+		459D472C279791D300B8E859 /* Base */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Base; path = ../Base.lproj/BirthdaysWindow.nib; sourceTree = "<group>"; };
+		459D472D279791D300B8E859 /* Base */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Base; path = ../Base.lproj/Bookmarks.nib; sourceTree = "<group>"; };
+		459D472E279791D300B8E859 /* Base */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Base; path = ../Base.lproj/CommunitySheet.nib; sourceTree = "<group>"; };
+		459D472F279791D300B8E859 /* Base */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Base; path = ../Base.lproj/CutSheet.nib; sourceTree = "<group>"; };
+		459D4730279791D300B8E859 /* Base */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Base; path = ../Base.lproj/HistoryWindow.nib; sourceTree = "<group>"; };
+		459D4731279791D300B8E859 /* Base */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Base; path = ../Base.lproj/HTMLPreview.nib; sourceTree = "<group>"; };
+		459D4732279791D300B8E859 /* Base */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Base; path = ../Base.lproj/HREFSheet.nib; sourceTree = "<group>"; };
+		459D4733279791D300B8E859 /* Base */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Base; path = ../Base.lproj/IMGSheet.nib; sourceTree = "<group>"; };
+		459D4734279791D400B8E859 /* Base */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Base; path = ../Base.lproj/MainMenu.nib; sourceTree = "<group>"; };
+		459D4735279791D400B8E859 /* Base */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Base; path = ../Base.lproj/NewFriendsWindow.nib; sourceTree = "<group>"; };
+		459D4736279791D400B8E859 /* Base */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Base; path = ../Base.lproj/PollEditor.nib; sourceTree = "<group>"; };
+		459D4737279791D400B8E859 /* Base */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Base; path = src/Base.lproj/Preferences.nib; sourceTree = "<group>"; };
+		459D4738279791D400B8E859 /* Base */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Base; path = ../Base.lproj/UserSheet.nib; sourceTree = "<group>"; };
+		459D4739279791D400B8E859 /* Base */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Base; path = ../Base.lproj/XJDocument.nib; sourceTree = "<group>"; };
 		585E030B0A1A2F7E001E92ED /* CFPSL_1_0.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = CFPSL_1_0.rtf; path = legal/CFPSL_1_0.rtf; sourceTree = "<group>"; };
 		5F044AD609224A4F003D6D2A /* XJMarkupRemovalVT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XJMarkupRemovalVT.h; path = src/ValueTransformers/XJMarkupRemovalVT.h; sourceTree = "<group>"; };
 		5F044AD709224A4F003D6D2A /* XJMarkupRemovalVT.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XJMarkupRemovalVT.m; path = src/ValueTransformers/XJMarkupRemovalVT.m; sourceTree = "<group>"; };
@@ -484,18 +497,11 @@
 		5F0C941806BC04DA0082A48B /* CreateDiskImage.sh */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.script.sh; name = CreateDiskImage.sh; path = src/CreateDiskImage.sh; sourceTree = "<group>"; };
 		5F142DA7091E935E0002ADAE /* XJGlossaryFilterArrayController.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = XJGlossaryFilterArrayController.h; sourceTree = "<group>"; };
 		5F142DA8091E935E0002ADAE /* XJGlossaryFilterArrayController.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = XJGlossaryFilterArrayController.m; sourceTree = "<group>"; };
-		5F142E3A091E95660002ADAE /* English */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = English; path = src/English.lproj/Add_Pressed.tiff; sourceTree = "<group>"; };
-		5F142E3C091E95660002ADAE /* English */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = English; path = src/English.lproj/Add.tiff; sourceTree = "<group>"; };
-		5F142E3E091E95660002ADAE /* English */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = English; path = src/English.lproj/Remove_Pressed.tiff; sourceTree = "<group>"; };
-		5F142E40091E95660002ADAE /* English */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = English; path = src/English.lproj/Remove.tiff; sourceTree = "<group>"; };
-		5F142E56091E9BE20002ADAE /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = src/English.lproj/GlossaryWindow.nib; sourceTree = "<group>"; };
 		5F5468C0092809EF00ABCAC9 /* XJSyndicationData.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = XJSyndicationData.h; sourceTree = "<group>"; };
 		5F5468C1092809EF00ABCAC9 /* XJSyndicationData.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = XJSyndicationData.m; sourceTree = "<group>"; };
 		5F54693D09280BAF00ABCAC9 /* PostToWeblog.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = PostToWeblog.tif; path = src/Art/PostToWeblog.tif; sourceTree = "<group>"; };
-		5F562CB906B99296004629AE /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = src/English.lproj/Localizable.strings; sourceTree = "<group>"; };
 		5F5B05250924D90A005BB86B /* XJApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XJApplication.h; sourceTree = "<group>"; };
 		5F5B05260924D90A005BB86B /* XJApplication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XJApplication.m; sourceTree = "<group>"; };
-		5F5B05670924DD45005BB86B /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = src/English.lproj/Preferences.nib; sourceTree = "<group>"; };
 		5F5B05870924E5A0005BB86B /* XJPreferencesController.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = XJPreferencesController.h; sourceTree = "<group>"; };
 		5F5B05880924E5A0005BB86B /* XJPreferencesController.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = XJPreferencesController.m; sourceTree = "<group>"; };
 		5F5B083E09252596005BB86B /* ApplicationDefaults.plist */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.xml; name = ApplicationDefaults.plist; path = src/ApplicationDefaults.plist; sourceTree = "<group>"; };
@@ -928,7 +934,7 @@
 				8D15AC360486D014006FF6A4 /* Info.plist */,
 				089C165FFE840EACC02AAC07 /* InfoPlist.strings */,
 				5F562CB806B99296004629AE /* Localizable.strings */,
-				1B1E16DF04E4465300894181 /* Xjournal Help */,
+				1B1E16E004E4465300894181 /* Xjournal Help */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -1054,14 +1060,15 @@
 		2A37F4A9FDCFA73011CA2CEA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0610;
+				LastUpgradeCheck = 1320;
 			};
 			buildConfigurationList = 5FD243CE0861F8BC0007E0C5 /* Build configuration list for PBXProject "Xjournal" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 1;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 2A37F4AAFDCFA73011CA2CEA /* Xjournal */;
 			projectDirPath = "";
@@ -1186,7 +1193,7 @@
 				1BBFE83204C4978B002D9439 /* HistoryDownload.icns in Resources */,
 				1B870E0B04C7EAA200C54147 /* ChangeNotes.rtf in Resources */,
 				1B870E0D04C7EABE00C54147 /* ReadMe.rtf in Resources */,
-				F3ACB2D01A9D222300D6AA64 /* Xjournal Help in Resources */,
+				459D47112797918E00B8E859 /* Xjournal Help in Resources */,
 				1B0DEBEA053AF10C00A310CF /* make_event_ical.txt in Resources */,
 				1B967FC5058779680035F70C /* itunes.png in Resources */,
 				5F071A0605DB8A34003058D3 /* GenPreferences.tiff in Resources */,
@@ -1315,23 +1322,15 @@
 		089C165FFE840EACC02AAC07 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				089C1660FE840EACC02AAC07 /* English */,
+				459D4716279791C800B8E859 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		1B1E16DF04E4465300894181 /* Xjournal Help */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1B1E16E004E4465300894181 /* English.lproj */,
-			);
-			name = "Xjournal Help";
 			sourceTree = "<group>";
 		};
 		1B49FD0A04F4300400F9843B /* HTMLPreview.nib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				1B49FD0B04F4300400F9843B /* English */,
+				459D4731279791D300B8E859 /* Base */,
 			);
 			name = HTMLPreview.nib;
 			path = src/English.lproj;
@@ -1340,7 +1339,7 @@
 		1BBD8A0704B018FF003882CD /* NewFriendsWindow.nib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				1BBD8A0804B018FF003882CD /* English */,
+				459D4735279791D400B8E859 /* Base */,
 			);
 			name = NewFriendsWindow.nib;
 			path = src/English.lproj;
@@ -1349,7 +1348,7 @@
 		1BBD8A0904B018FF003882CD /* PollEditor.nib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				1BBD8A0A04B018FF003882CD /* English */,
+				459D4736279791D400B8E859 /* Base */,
 			);
 			name = PollEditor.nib;
 			path = src/English.lproj;
@@ -1358,7 +1357,7 @@
 		1BBD8A0D04B018FF003882CD /* UserSheet.nib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				1BBD8A0E04B018FF003882CD /* English */,
+				459D4738279791D400B8E859 /* Base */,
 			);
 			name = UserSheet.nib;
 			path = src/English.lproj;
@@ -1367,7 +1366,7 @@
 		1BBD8A1304B018FF003882CD /* XJDocument.nib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				1BBD8A1404B018FF003882CD /* English */,
+				459D4739279791D400B8E859 /* Base */,
 			);
 			name = XJDocument.nib;
 			path = src/English.lproj;
@@ -1376,7 +1375,7 @@
 		1BBD8A2804B01916003882CD /* AccountEditWindow.nib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				1BBD8A2904B01916003882CD /* English */,
+				459D472B279791D300B8E859 /* Base */,
 			);
 			name = AccountEditWindow.nib;
 			path = src/English.lproj;
@@ -1385,7 +1384,7 @@
 		1BBD8A2A04B01916003882CD /* BirthdaysWindow.nib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				1BBD8A2B04B01916003882CD /* English */,
+				459D472C279791D300B8E859 /* Base */,
 			);
 			name = BirthdaysWindow.nib;
 			path = src/English.lproj;
@@ -1394,7 +1393,7 @@
 		1BBD8A2C04B01916003882CD /* Bookmarks.nib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				1BBD8A2D04B01916003882CD /* English */,
+				459D472D279791D300B8E859 /* Base */,
 			);
 			name = Bookmarks.nib;
 			path = src/English.lproj;
@@ -1403,7 +1402,7 @@
 		1BBD8A2E04B01916003882CD /* CommunitySheet.nib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				1BBD8A2F04B01916003882CD /* English */,
+				459D472E279791D300B8E859 /* Base */,
 			);
 			name = CommunitySheet.nib;
 			path = src/English.lproj;
@@ -1412,7 +1411,7 @@
 		1BBD8A3004B01916003882CD /* CutSheet.nib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				1BBD8A3104B01916003882CD /* English */,
+				459D472F279791D300B8E859 /* Base */,
 			);
 			name = CutSheet.nib;
 			path = src/English.lproj;
@@ -1421,7 +1420,7 @@
 		1BBD8A3404B01916003882CD /* HistoryWindow.nib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				1BBD8A3504B01916003882CD /* English */,
+				459D4730279791D300B8E859 /* Base */,
 			);
 			name = HistoryWindow.nib;
 			path = src/English.lproj;
@@ -1430,7 +1429,7 @@
 		1BBD8A3604B01916003882CD /* HREFSheet.nib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				1BBD8A3704B01916003882CD /* English */,
+				459D4732279791D300B8E859 /* Base */,
 			);
 			name = HREFSheet.nib;
 			path = src/English.lproj;
@@ -1439,7 +1438,7 @@
 		1BBD8A3804B01916003882CD /* IMGSheet.nib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				1BBD8A3904B01916003882CD /* English */,
+				459D4733279791D300B8E859 /* Base */,
 			);
 			name = IMGSheet.nib;
 			path = src/English.lproj;
@@ -1448,7 +1447,7 @@
 		2A37F4B6FDCFA73011CA2CEA /* MainMenu.nib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				2A37F4B7FDCFA73011CA2CEA /* English */,
+				459D4734279791D400B8E859 /* Base */,
 			);
 			name = MainMenu.nib;
 			path = src/English.lproj;
@@ -1457,7 +1456,7 @@
 		2A37F4B9FDCFA73011CA2CEA /* Credits.rtf */ = {
 			isa = PBXVariantGroup;
 			children = (
-				2A37F4BAFDCFA73011CA2CEA /* Credits.rtf */,
+				459D4715279791C800B8E859 /* en */,
 			);
 			name = Credits.rtf;
 			sourceTree = "<group>";
@@ -1465,7 +1464,7 @@
 		5F142E39091E95660002ADAE /* Add_Pressed.tiff */ = {
 			isa = PBXVariantGroup;
 			children = (
-				5F142E3A091E95660002ADAE /* English */,
+				459D4714279791C800B8E859 /* en */,
 			);
 			name = Add_Pressed.tiff;
 			sourceTree = "<group>";
@@ -1473,7 +1472,7 @@
 		5F142E3B091E95660002ADAE /* Add.tiff */ = {
 			isa = PBXVariantGroup;
 			children = (
-				5F142E3C091E95660002ADAE /* English */,
+				459D4713279791C800B8E859 /* en */,
 			);
 			name = Add.tiff;
 			sourceTree = "<group>";
@@ -1481,7 +1480,7 @@
 		5F142E3D091E95660002ADAE /* Remove_Pressed.tiff */ = {
 			isa = PBXVariantGroup;
 			children = (
-				5F142E3E091E95660002ADAE /* English */,
+				459D4719279791C800B8E859 /* en */,
 			);
 			name = Remove_Pressed.tiff;
 			sourceTree = "<group>";
@@ -1489,7 +1488,7 @@
 		5F142E3F091E95660002ADAE /* Remove.tiff */ = {
 			isa = PBXVariantGroup;
 			children = (
-				5F142E40091E95660002ADAE /* English */,
+				459D4718279791C800B8E859 /* en */,
 			);
 			name = Remove.tiff;
 			sourceTree = "<group>";
@@ -1497,7 +1496,7 @@
 		5F142E55091E9BE20002ADAE /* GlossaryWindow.nib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				5F142E56091E9BE20002ADAE /* English */,
+				459D472A279791D300B8E859 /* Base */,
 			);
 			name = GlossaryWindow.nib;
 			sourceTree = "<group>";
@@ -1505,7 +1504,7 @@
 		5F562CB806B99296004629AE /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				5F562CB906B99296004629AE /* English */,
+				459D4717279791C800B8E859 /* en */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -1513,7 +1512,7 @@
 		5F5B05660924DD45005BB86B /* Preferences.nib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				5F5B05670924DD45005BB86B /* English */,
+				459D4737279791D400B8E859 /* Base */,
 			);
 			name = Preferences.nib;
 			sourceTree = "<group>";
@@ -1524,7 +1523,8 @@
 		5FD243C50861F8BC0007E0C5 /* Development */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1.0.6a2;
@@ -1538,7 +1538,6 @@
 				FRAMEWORK_SEARCH_PATHS_QUOTED_2 = "\"$(SRCROOT)\"";
 				FRAMEWORK_VERSION = A;
 				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_ENABLE_TRIGRAPHS = NO;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -1551,8 +1550,10 @@
 				INFOPLIST_FILE = src/Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
 				LIBRARY_SEARCH_PATHS = "";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = org.speirs.xjournal;
 				PRODUCT_NAME = Xjournal;
 				SECTORDER_FLAGS = "";
 				USER_HEADER_SEARCH_PATHS = "";
@@ -1570,7 +1571,8 @@
 		5FD243C60861F8BC0007E0C5 /* Deployment */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = YES;
 				CURRENT_PROJECT_VERSION = 1.0.6a2;
@@ -1585,7 +1587,6 @@
 				FRAMEWORK_SEARCH_PATHS_QUOTED_1 = "\"$(SRCROOT)/../LJKit/build/Deployment\"";
 				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)\"";
 				FRAMEWORK_VERSION = A;
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_ENABLE_TRIGRAPHS = NO;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -1597,8 +1598,10 @@
 				INFOPLIST_FILE = src/Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
 				LIBRARY_SEARCH_PATHS = "";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = org.speirs.xjournal;
 				PRODUCT_NAME = Xjournal;
 				SECTORDER_FLAGS = "";
 				USER_HEADER_SEARCH_PATHS = "";
@@ -1616,7 +1619,8 @@
 		5FD243C70861F8BC0007E0C5 /* Linked with Symbols */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1.0.6a2;
 				DiskImageEncryption = 1;
@@ -1629,7 +1633,6 @@
 				FRAMEWORK_SEARCH_PATHS_QUOTED_2 = "\"$(SRCROOT)/../LJKit/build/Development\"";
 				FRAMEWORK_SEARCH_PATHS_QUOTED_3 = "\"$(SRCROOT)\"";
 				FRAMEWORK_VERSION = A;
-				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_ENABLE_TRIGRAPHS = NO;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -1641,8 +1644,10 @@
 				INFOPLIST_FILE = src/Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
 				LIBRARY_SEARCH_PATHS = "";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = org.speirs.xjournal;
 				PRODUCT_NAME = Xjournal;
 				SECTORDER_FLAGS = "";
 				USER_HEADER_SEARCH_PATHS = "";
@@ -1660,7 +1665,8 @@
 		5FD243C80861F8BC0007E0C5 /* Default */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1.0.6a2;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1671,7 +1677,6 @@
 				FRAMEWORK_SEARCH_PATHS_QUOTED_1 = "\"$(SRCROOT)/../LJKit/build/Deployment\"";
 				FRAMEWORK_SEARCH_PATHS_QUOTED_2 = "\"$(SRCROOT)\"";
 				FRAMEWORK_VERSION = A;
-				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_ENABLE_TRIGRAPHS = NO;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -1683,8 +1688,10 @@
 				INFOPLIST_FILE = src/Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
 				LIBRARY_SEARCH_PATHS = "";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = org.speirs.xjournal;
 				PRODUCT_NAME = Xjournal;
 				SECTORDER_FLAGS = "";
 				USER_HEADER_SEARCH_PATHS = "";
@@ -1702,6 +1709,7 @@
 		5FD243CA0861F8BC0007E0C5 /* Development */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUGGING_SYMBOLS = YES;
 				DiskImageProduct = "$(PROJECT_NAME).app";
@@ -1715,13 +1723,13 @@
 				DiskImageWindowMinX = 100;
 				DiskImageWindowMinY = 100;
 				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				INFOPLIST_FILE = src/Info.plist;
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = "";
 				OTHER_REZFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = org.speirs.xjournal;
 				PRODUCT_NAME = "Disk Image";
 				SECTORDER_FLAGS = "";
 				WARNING_CFLAGS = (
@@ -1736,6 +1744,7 @@
 		5FD243CB0861F8BC0007E0C5 /* Deployment */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				COPY_PHASE_STRIP = YES;
 				CURRENT_PROJECT_VERSION = 1.0.4;
 				DEPLOYMENT_LOCATION = NO;
@@ -1751,10 +1760,10 @@
 				DiskImageWindowMaxY = 300;
 				DiskImageWindowMinX = 100;
 				DiskImageWindowMinY = 100;
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = "";
 				OTHER_REZFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = org.speirs.xjournal;
 				PRODUCT_NAME = "Disk Image";
 				SECTORDER_FLAGS = "";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1770,6 +1779,7 @@
 		5FD243CC0861F8BC0007E0C5 /* Linked with Symbols */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				DiskImageEncryption = 1;
 				DiskImageProduct = "$(PROJECT_NAME).app";
 				DiskImageSizeInMB = 10;
@@ -1784,6 +1794,7 @@
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = "";
 				OTHER_REZFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = org.speirs.xjournal;
 				PRODUCT_NAME = "Disk Image";
 				SECTORDER_FLAGS = "";
 				WARNING_CFLAGS = (
@@ -1797,6 +1808,7 @@
 		5FD243CD0861F8BC0007E0C5 /* Default */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				DiskImageProduct = "$(PROJECT_NAME).app";
 				DiskImageSizeInMB = 10;
 				DiskImageVolumeName = "$(PROJECT_NAME)";
@@ -1810,6 +1822,7 @@
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = "";
 				OTHER_REZFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = org.speirs.xjournal;
 				PRODUCT_NAME = "Disk Image";
 				SECTORDER_FLAGS = "";
 				WARNING_CFLAGS = (
@@ -1823,9 +1836,37 @@
 		5FD243CF0861F8BC0007E0C5 /* Development */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				MACOSX_DEPLOYMENT_TARGET = 10.4;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				MACOSX_DEPLOYMENT_TARGET_i386 = 10.4;
 				MACOSX_DEPLOYMENT_TARGET_ppc = 10.3;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -1834,7 +1875,33 @@
 		5FD243D00861F8BC0007E0C5 /* Deployment */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				MACOSX_DEPLOYMENT_TARGET = 10.4;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				MACOSX_DEPLOYMENT_TARGET_i386 = 10.4;
 				MACOSX_DEPLOYMENT_TARGET_ppc = 10.3;
 				SDKROOT = macosx;
@@ -1845,7 +1912,33 @@
 		5FD243D10861F8BC0007E0C5 /* Linked with Symbols */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				MACOSX_DEPLOYMENT_TARGET = 10.4;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				MACOSX_DEPLOYMENT_TARGET_i386 = 10.4;
 				MACOSX_DEPLOYMENT_TARGET_ppc = 10.3;
 				SDKROOT = macosx;
@@ -1856,7 +1949,33 @@
 		5FD243D20861F8BC0007E0C5 /* Default */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				MACOSX_DEPLOYMENT_TARGET = 10.4;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				MACOSX_DEPLOYMENT_TARGET_i386 = 10.4;
 				MACOSX_DEPLOYMENT_TARGET_ppc = 10.3;
 				OBJROOT = ../Build/Intermediate;
