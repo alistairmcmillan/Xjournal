@@ -144,7 +144,7 @@ static XJAccountManager *manager;
 - (void)logInAccount: (LJAccount *)theAccount
 {
 
-		[[theAccount server] setURL: [NSURL URLWithString:@"http://www.livejournal.com"]];
+		[[theAccount server] setURL: [NSURL URLWithString:@"https://www.livejournal.com"]];
 
 	NS_DURING
 		[theAccount loginWithPassword: [self passwordForUsername: [theAccount username]]];
