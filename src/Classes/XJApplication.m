@@ -14,7 +14,8 @@
 {	
     exceptions = 0;
     exceptionDate = [[NSDate alloc] init];
-    do {
+// Private API
+//    do {
         NS_DURING {
             [super run];
             NS_VOIDRETURN;
@@ -29,13 +30,15 @@
                 exceptions = 0;
             }
             if (localException) {
-                if (_appFlags._hasBeenRun)
+// Private API
+//                if (_appFlags._hasBeenRun)
                     [self handleRunException:localException];
-                else
-                    [self handleInitException:localException];
+//                else
+//                    [self handleInitException:localException];
             }
         } NS_ENDHANDLER;
-    } while (_appFlags._hasBeenRun);
+// Private API
+//    } while (_appFlags._hasBeenRun);
 }
 
 - (void)handleRunException:(NSException *)anException;

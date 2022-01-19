@@ -181,6 +181,8 @@
 		1BF27EF304B02A9400121863 /* stop.1.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 1BF27EE804B02A9400121863 /* stop.1.tiff */; };
 		1BF27EF404B02A9400121863 /* stop.2.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 1BF27EE904B02A9400121863 /* stop.2.tiff */; };
 		459D47112797918E00B8E859 /* Xjournal Help in Resources */ = {isa = PBXBuildFile; fileRef = 1B1E16E004E4465300894181 /* Xjournal Help */; };
+		459D473E2797936A00B8E859 /* NSDocumentController-CustomDocs.h in Headers */ = {isa = PBXBuildFile; fileRef = 459D473C2797936900B8E859 /* NSDocumentController-CustomDocs.h */; };
+		459D473F2797936A00B8E859 /* NSDocumentController-CustomDocs.m in Sources */ = {isa = PBXBuildFile; fileRef = 459D473D2797936900B8E859 /* NSDocumentController-CustomDocs.m */; };
 		585E030C0A1A2F7E001E92ED /* CFPSL_1_0.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 585E030B0A1A2F7E001E92ED /* CFPSL_1_0.rtf */; };
 		5F044AD809224A4F003D6D2A /* XJMarkupRemovalVT.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F044AD609224A4F003D6D2A /* XJMarkupRemovalVT.h */; };
 		5F044AD909224A50003D6D2A /* XJMarkupRemovalVT.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F044AD709224A4F003D6D2A /* XJMarkupRemovalVT.m */; };
@@ -204,7 +206,6 @@
 		5F5B098E092563B6005BB86B /* XJMusic.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F5B098C092563B6005BB86B /* XJMusic.m */; };
 		5F5B0991092563E8005BB86B /* NSString+Templating.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F5B098F092563E8005BB86B /* NSString+Templating.h */; };
 		5F5B0992092563E8005BB86B /* NSString+Templating.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F5B0990092563E8005BB86B /* NSString+Templating.m */; };
-		5F6325AA083C922C007F6AF9 /* libcrypto.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F6325A9083C922C007F6AF9 /* libcrypto.dylib */; };
 		5F73D7F305DE9C6400DADCD8 /* imagesize.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 5F73D7F205DE9C6400DADCD8 /* imagesize.tiff */; };
 		5FB5980605EA96A100B78E38 /* ImageResource.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FB5980505EA96A100B78E38 /* ImageResource.png */; };
 		5FBEA5F2093107170071F534 /* XJFontNameToDisplayVT.h in Headers */ = {isa = PBXBuildFile; fileRef = 5FBEA5F0093107170071F534 /* XJFontNameToDisplayVT.h */; };
@@ -490,6 +491,8 @@
 		459D4737279791D400B8E859 /* Base */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Base; path = src/Base.lproj/Preferences.nib; sourceTree = "<group>"; };
 		459D4738279791D400B8E859 /* Base */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Base; path = ../Base.lproj/UserSheet.nib; sourceTree = "<group>"; };
 		459D4739279791D400B8E859 /* Base */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Base; path = ../Base.lproj/XJDocument.nib; sourceTree = "<group>"; };
+		459D473C2797936900B8E859 /* NSDocumentController-CustomDocs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDocumentController-CustomDocs.h"; sourceTree = "<group>"; };
+		459D473D2797936900B8E859 /* NSDocumentController-CustomDocs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDocumentController-CustomDocs.m"; sourceTree = "<group>"; };
 		585E030B0A1A2F7E001E92ED /* CFPSL_1_0.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = CFPSL_1_0.rtf; path = legal/CFPSL_1_0.rtf; sourceTree = "<group>"; };
 		5F044AD609224A4F003D6D2A /* XJMarkupRemovalVT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XJMarkupRemovalVT.h; path = src/ValueTransformers/XJMarkupRemovalVT.h; sourceTree = "<group>"; };
 		5F044AD709224A4F003D6D2A /* XJMarkupRemovalVT.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XJMarkupRemovalVT.m; path = src/ValueTransformers/XJMarkupRemovalVT.m; sourceTree = "<group>"; };
@@ -545,7 +548,6 @@
 				1BBD8C9F04B01A8B003882CD /* WebKit.framework in Frameworks */,
 				5FBF479008138A6400829423 /* Cocoa.framework in Frameworks */,
 				5FBF479E08138DEE00829423 /* CoreServices.framework in Frameworks */,
-				5F6325AA083C922C007F6AF9 /* libcrypto.dylib in Frameworks */,
 				5FD2849C0926AF4F005A1060 /* OgreKit.framework in Frameworks */,
 				BC2DBF8C0BF2AA7B0078A37C /* LJKit.framework in Frameworks */,
 				F3A392300F7FFF6C0079760A /* Sparkle.framework in Frameworks */,
@@ -601,6 +603,8 @@
 		1BBD891004B01883003882CD /* AppKit Categories */ = {
 			isa = PBXGroup;
 			children = (
+				459D473C2797936900B8E859 /* NSDocumentController-CustomDocs.h */,
+				459D473D2797936900B8E859 /* NSDocumentController-CustomDocs.m */,
 				5F5B098F092563E8005BB86B /* NSString+Templating.h */,
 				5F5B0990092563E8005BB86B /* NSString+Templating.m */,
 				1BBD891104B01883003882CD /* KeyHandlingTableView.h */,
@@ -1010,6 +1014,7 @@
 				1BBD89FF04B0189F003882CD /* XJGlossaryWindowController.h in Headers */,
 				1BBD8A0104B0189F003882CD /* XJHistoryWindowController.h in Headers */,
 				1BBD8A0504B0189F003882CD /* XJPollEditorController.h in Headers */,
+				459D473E2797936A00B8E859 /* NSDocumentController-CustomDocs.h in Headers */,
 				1B76D69404CDD901008E50A3 /* AddressBookDropView.h in Headers */,
 				1B4DEF5205072AAA00090913 /* LJKit-URLLaunching.h in Headers */,
 				1B7C9A420566708F00F0E1AC /* LJPollTextEntryQuestion.h in Headers */,
@@ -1253,6 +1258,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D15AC320486D014006FF6A4 /* main.m in Sources */,
+				459D473F2797936A00B8E859 /* NSDocumentController-CustomDocs.m in Sources */,
 				1BBD891C04B01883003882CD /* KeyHandlingTableView.m in Sources */,
 				1BBD892204B01883003882CD /* NSString+Extensions.m in Sources */,
 				1BBD893104B0188D003882CD /* XJBookmarkFolder.m in Sources */,

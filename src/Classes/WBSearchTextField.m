@@ -131,7 +131,7 @@ static NSMutableArray * _stopImages_=nil;
 
 - (void)selectText:(id)sender
 {
-    NSText *t = [_window fieldEditor: YES
+	NSText *t = [cWindow fieldEditor: YES
                            forObject: self];
     
     if ([t superview] == nil)
@@ -327,7 +327,7 @@ static NSMutableArray * _stopImages_=nil;
     
     // Draw the halo if needed
     
-    if ([_window isKeyWindow])
+	if ([cWindow isKeyWindow])
     {
         if (_flags.displayFocus==YES)
         {
@@ -436,7 +436,7 @@ static NSMutableArray * _stopImages_=nil;
     }
     else
     {
-        NSText* t = [_window fieldEditor: YES forObject: self];
+		NSText* t = [cWindow fieldEditor: YES forObject: self];
         NSText * tObject;
         float tOffset=(_flags.showCancelButtons==NO) ? WBSEARCHTEXTFIELD_WIDTH_OFFSET : WBSEARCHTEXTFIELD_CANCEL_OFFSET;
         
@@ -496,7 +496,7 @@ static NSMutableArray * _stopImages_=nil;
             NSText *tObject;
             NSRect tBounds=[self bounds];
             float tOffset;
-            NSText *t = [_window fieldEditor: YES forObject: self];
+			NSText *t = [cWindow fieldEditor: YES forObject: self];
             NSRange tRange;
             NSString * tString;
             id tCell=[self cell];
@@ -509,7 +509,7 @@ static NSMutableArray * _stopImages_=nil;
             
             [tCell setStringValue: tString];
             
-            [_window endEditingFor:t];
+            [cWindow endEditingFor:t];
             
             tObject = [tCell setUpFieldEditorAttributes: t];
             
@@ -570,7 +570,7 @@ static NSMutableArray * _stopImages_=nil;
         
         formatter = [tCell formatter];
         
-        string = [[[[_window fieldEditor: YES
+        string = [[[[cWindow fieldEditor: YES
                             forObject: self] string] copy] autorelease];
     
         if (formatter == nil)
@@ -590,6 +590,8 @@ static NSMutableArray * _stopImages_=nil;
             }
             else
             {
+				// Private API?
+				/*
                 if ([_delegate respondsToSelector:@selector(control:didFailToFormatString:errorDescription:)]==YES)
                 {
                     if ([_delegate control: self didFailToFormatString: string 
@@ -598,6 +600,7 @@ static NSMutableArray * _stopImages_=nil;
                         [tCell setStringValue: string];
                     }
                 }
+				 */
             }
         }
         
@@ -621,10 +624,10 @@ static NSMutableArray * _stopImages_=nil;
                 case NSReturnTextMovement:
                     if ([self sendAction: [self action] to: [self target]] == NO)
                     {
-                        NSEvent *event = [_window currentEvent];
+                        NSEvent *event = [cWindow currentEvent];
     
                         if ([self performKeyEquivalent: event] == NO &&
-                            [_window performKeyEquivalent: event] == NO)
+							[cWindow performKeyEquivalent: event] == NO)
                         {
                             [self selectText: self];
                             return;
@@ -633,9 +636,9 @@ static NSMutableArray * _stopImages_=nil;
                     break;
                 case NSTabTextMovement:
             
-                    [_window selectKeyViewFollowingView: self];
+                    [cWindow selectKeyViewFollowingView: self];
     
-                    if ([_window firstResponder] == _window)
+					if ([cWindow firstResponder] == cWindow)
                     {
                         [self selectText: self];
                         return;
@@ -643,9 +646,9 @@ static NSMutableArray * _stopImages_=nil;
                     break;
                 case NSBacktabTextMovement:
                     
-                    [_window selectKeyViewPrecedingView: self];
+                    [cWindow selectKeyViewPrecedingView: self];
     
-                    if ([_window firstResponder] == _window)
+					if ([cWindow firstResponder] == cWindow)
                     {
                         [self selectText: self];
                         return;
